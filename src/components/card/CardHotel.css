@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    border: 1px solid;
+    width: 300px;
+    height: 550px;
+}
+
+.date {
+    margin: 4px;
+    background-color: rgb(7, 218, 147);
+    color: white;
+}
+
+.description {
+    overflow: scroll;
+}
