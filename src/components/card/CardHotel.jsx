@@ -3,6 +3,10 @@
  */
 
 import './CardHotel.css';
+/**
+ * icons
+ */
+//import marcador from './../icons/marcador-de-posición.svg';
 
 /**
  * Data
@@ -21,6 +25,7 @@ export default function CardHotel () {
             {
                 hotelsData.map((card) => {
                     const {photo, name, availabilityFrom, availabilityTo, description, city, country, rooms, price} = card;
+                    
                     return(
                         <Card
                             photo={photo}
@@ -30,6 +35,8 @@ export default function CardHotel () {
                             country={country}
                             rooms={rooms}
                             price={price}
+                            availabilityFrom={availabilityFrom}
+                            availabilityTo={availabilityTo}
                         />
                     )
                 })
@@ -45,17 +52,21 @@ function Card (props) {
             <div>
                 <img width="100%" src={photo} alt="Esto es una foto del Hotel"/>
             </div>
-            <div className="text">
+            <div className="container-description">
                 <h2 className="name">{name}</h2>
-                <p className="date">hola{availabilityFrom}</p>
-                <p className="date">hola{availabilityTo}</p>
-            </div> 
+                <p className="date from">{availabilityFrom}, desde esta fecha</p>
+                <p className="date to">{availabilityTo}, hasta esta fecha</p>
                 <p className="description">{description}</p>
+            </div> 
             <div>
-                <span>{city},   </span>
-                <span>{country}</span>
+                <img src="" alt="" />
+                <p className="city-country">{city}, {country}</p>
             </div>
-            <p>{rooms} habitaciones {price}</p>
+            <div>
+                <img src="" alt="" />
+                <p>{rooms} habitaciones</p>
+                <span>{price}</span>
+            </div>
             <Button />
         </div>
     )

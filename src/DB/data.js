@@ -14,7 +14,7 @@ export const hotelsData = [
     rooms: 11,
     city: 'Buenos Aires',
     country: 'Argentina',
-    price: 4
+    price: '$$$$'
   },
   {
     slug: 'sainte-jeanne',

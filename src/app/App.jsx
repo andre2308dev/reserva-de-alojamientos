@@ -15,7 +15,7 @@ import CardHotel from '../components/card/CardHotel';
 
 function App() {
   return (
-    <div clasName="App"> 
+    <div className="App"> 
       <CardHotel />
     </div>
   )
